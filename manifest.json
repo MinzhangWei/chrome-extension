@@ -1,0 +1,32 @@
+{
+    "manifest_version": 2,
+
+    "name": "zhangge crawing",
+    "description": "Page crawing",
+    "version": "0.99",
+
+    "background": {
+        "scripts": [
+            "jquery.js",
+            "background.js"
+        ]
+    },
+
+    "permissions": [
+        "tabs"
+    ],
+
+    "content_scripts":[{
+        "matches":["http://www.cnblogs.com/*"],
+        "js":[
+            "jquery.js",
+            "content_script.js"
+        ]
+    }],
+
+    "browser_action": {
+        "default_icon": "icon.png",
+        "default_popup": "popup.html",
+        "default_title": "zhangge crawing tools"
+    }
+}
